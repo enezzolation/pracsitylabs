@@ -1,0 +1,7 @@
+<div class="thim-have-any-question">
+Have any question? 
+<div class="mobile"><i class="fa fa-phone"></i><a href="tel:00123456789" class="value">(00) 123 456 789</a>
+</div>
+<div class="email"><i class="fa fa-envelope"></i><a href="mailto:hello@eduma.com">hello@eduma.com</a>
+</div>
+</div>

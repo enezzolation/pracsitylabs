@@ -1,0 +1,1 @@
+<input type="email" id="mc4wp_email" name="EMAIL" placeholder="Your email here" required /><input type="submit" value="Subscribe" />

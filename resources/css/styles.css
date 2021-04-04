@@ -1,0 +1,370 @@
+/*
+Yellow : #FFB606
+Blue   : #0088a9
+Black  : #24252a
+White  : #edf0f1
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* ---------------------------------- */
+/* Navbar */
+/* ---------------------------------- */
+
+/* --Basic styling-- */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+/* ------------------------------ */
+/* REUSABLE COMPONENTS */
+/* ------------------------------ */
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+i {
+  color: #ABABAB;
+  font-size: 12px;
+  /* margin-left: 0; */
+  margin-right: 6px;
+}
+section {
+  padding: 80px 0;
+}
+
+/* ----- HEADINGS ------ */
+
+h1 {
+  font-size: 56px;
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.hero-text-box h2 {
+  font-size: 40px;
+  color: white;
+}
+section h2 {
+  font-size: 30px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* ----- BUTTONS ------ */
+
+.btn:link,
+.btn:visited {
+  display:inline-block;
+  padding: 10px 30px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+.btn-full:link,
+.btn-full:visited {
+  background-color: #FFB606;
+  border: 1px solid #FFB606;
+  color: #333;
+  font-size: 13px;
+}
+.btn-ghost:link,
+.btn-full:visited {
+  border: 1px solid #111;
+  color: #333;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.btn:hover,
+.btn:active {
+  background-color: #e3a000;
+}
+.btn-full:hover,
+.btn-full:active {
+  border: 1px solid #e3a000;
+}
+.btn-ghost:hover,
+.btn-full:active {
+  background-color: #111;
+  color: #fff;
+}
+
+/* ------------------------------ */
+/* HEADER */
+/* ------------------------------ */
+
+header {
+  background: url(/resources/css/img/hero1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+nav {
+  background: #24252a;
+  padding: 5px 10%;
+}
+.menu li:not(.logo) a:link,
+.menu li:not(.logo) a:visited {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+}
+.menu li:not(.logo) a:hover,
+.menu li:not(.logo) a:active {
+  border-bottom: 2px solid #FFB606;
+}
+.menu,
+.submenu {
+  list-style: none;
+}
+.logo img {
+  width: 160px;
+}
+.item {
+  padding: 0 15px;
+}
+.item.button {
+  padding: 9px 5px;
+}
+/* .item:not(.button) a:hover,
+.item a:hover::after {
+  color: #ccc;
+} */
+
+/* ---------------------------------- */
+/* POPULAR COURSES */
+/* ---------------------------------- */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px 1fr;
+  gap: 0px 30px;
+  grid-template-areas:
+    "grow grow grow grow"
+    "item-1 item-2 item-3 item-4";
+}
+
+.grow {
+  grid-area: grow;
+}
+
+/* .black {
+  font-color: #111;
+} */
+
+.item-1 { grid-area: item-1; }
+
+.item-2 { grid-area: item-2; }
+
+.item-3 { grid-area: item-3; }
+
+.item-4 { grid-area: item-4; }
+
+
+/* Mobile menu */
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu li a {
+  display: block;
+  padding: 17px 5px;
+}
+.menu li.subitem a {
+  padding: 15px;
+}
+.toggle {
+  order: 1;
+  font-size: 20px;
+}
+.item.button {
+  order: 2;
+}
+.item {
+  order: 3;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+.active .item {
+  display: block;
+}
+.button.secondary {
+  /* divider between buttons and menu links */
+  border-bottom: 1px #444 solid;
+}
+/* Submenu up from mobile screens */
+.submenu {
+  display: none;
+}
+.submenu-active .submenu {
+  display: block;
+}
+.has-submenu i {
+  font-size: 12px;
+}
+.has-submenu > a::after {
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  content: "\f078";
+  color: white;
+  padding-left: 5px;
+}
+.subitem a {
+  padding: 10px 15px;
+}
+.submenu-active {
+  background-color: #111;
+  border-radius: 3px;
+}
+
+
+/* Tablet menu */
+
+@media all and (min-width: 700px) {
+  nav {
+    background: none;
+  }
+  .menu {
+    justify-content: center;
+  }
+  .logo {
+    flex: 1;
+  }
+  .item.button {
+    width: auto;
+    order: 1;
+    display: block;
+  }
+  .toggle {
+    flex: 1;
+    text-align: right;
+    order: 2;
+  }
+  /* Button up from tablet screen */
+  .menu li.button a {
+    padding: 10px 15px;
+    margin: 5px 0;
+  }
+  /* .button a {
+    background: #0080ff;
+    border: 1px royalblue solid;
+  } */
+  .button.secondary {
+    border: 0;
+  }
+  /* .button.secondary a {
+    background: transparent;
+    border: 1px #0080ff solid;
+  } */
+  .button a:hover {
+    text-decoration: none;
+  }
+  /* .button:not(.secondary) a:hover {
+    background: royalblue;
+    border-color: darkblue;
+  } */
+
+}
+
+
+/* Desktop menu */
+
+@media all and (min-width: 960px) {
+  .menu {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background: none;
+    align-items: center;
+  }
+  .logo {
+    order: 0;
+  }
+  .item {
+    order: 1;
+    position: relative;
+    display: block;
+    width: auto;
+  }
+  .button {
+    order: 2;
+  }
+  .submenu-active .submenu {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 68px;
+    background: #111;
+  }
+  .toggle {
+    display: none;
+  }
+  .submenu-active {
+    border-radius: 0;
+  }
+
+  /* Top Bar */
+  .topbar {
+    background: #111111;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 10%;
+  }
+  .topbar a {
+    color: #edf0f1;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .topbar .item:not(.grey) a:hover{
+    text-decoration: underline;
+  }
+  .topbar .left {
+    display: flex;
+    align-items: center;
+  }
+  .topbar .left .item {
+    padding: 0;
+    margin: 0 0 0 11px;
+  }
+  .topbar .right {
+    display: flex;
+    align-items: center;
+  }
+  .topbar .right .cool {
+    border-right: 1px #212121 solid;
+  }
+}
+
+
+

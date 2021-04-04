@@ -1,0 +1,7 @@
+<div class="thim-footer-location">
+
+<img class="alignnone size-full wp-image-10" src="https://thim.staging.wpengine.com/wp-content/uploads/2015/11/logo.png" alt="logo-eduma-the-best-lms-wordpress-theme" width="145" height="40" />
+<p class="info"><i class="fa fa-phone"></i><a href="tel:00123456789">(00) 123 456 789</a></p>
+<p class="info"><i class="fa fa-envelope"></i><a href="mailto:hello@eduma.com">hello@eduma.com</a></p>
+
+</div>
